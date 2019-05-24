@@ -5,7 +5,28 @@ public class Main31 {
     public static void main(String[] args) {
         testQueue();
         System.out.println("-----------------");
+
         testStack();
+        System.out.println("-----------------");
+
+        String rString = reverseString("Строка для преобразования");
+        System.out.println(rString);
+
+
+    }
+
+    private static String reverseString(String string) {
+        char[] chars = string.toCharArray();
+        Stack<Character> stack = new Stack<>(chars.length);
+        for (char aChar : chars) {
+            stack.push(aChar);
+        }
+        StringBuilder sb = new StringBuilder();
+        while (!stack.isEmpty()) {
+            sb.append(stack.pop());
+        }
+
+        return sb.toString();
     }
 
     private static void testStack() {

@@ -16,8 +16,14 @@ public class Stack<E extends Object & Comparable<? super E>> extends ArrayImpl<E
         if (isEmpty()) {
             throw new RuntimeException("Stack is Empty!");
         }
-        E value = super.get(getSize() - 1);
-        super.remove(value);
+        int index = getSize() - 1;
+        E value = super.get(index);
+        remove(index);
         return value;
+    }
+
+    private void remove(int index) {
+        super.data[index] = null;
+        super.currentSize--;
     }
 }
