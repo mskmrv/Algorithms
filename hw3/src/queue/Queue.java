@@ -9,7 +9,6 @@ public class Queue<E extends Object & Comparable<? super E>> extends ArrayImpl<E
 
     public void insert(E value) {
         super.add(value);
-
     }
 
     public E remove() {

@@ -1,8 +1,39 @@
 import queue.Queue;
+import stack.Stack;
 
 public class Main31 {
     public static void main(String[] args) {
         testQueue();
+        System.out.println("-----------------");
+        testStack();
+    }
+
+    private static void testStack() {
+        Stack<Integer> stack = new Stack(6);
+
+        stack.push(5);
+        stack.push(4);
+        stack.push(8);
+        stack.push(9);
+        stack.push(7);
+        stack.push(12);
+
+        System.out.println("Размер stack: " + stack.getSize());
+        System.out.println(stack);
+
+        System.out.println();
+
+        System.out.println("Получение элемента из стека pop(): ");
+        System.out.println(stack.pop());
+        System.out.println("Размер stack: " + stack.getSize());
+        System.out.println(stack);
+
+        System.out.println();
+
+        System.out.println("Получение элемента из стека pop(): ");
+        System.out.println(stack.pop());
+        System.out.println("Размер stack: " + stack.getSize());
+        System.out.println(stack);
     }
 
     private static void testQueue() {
