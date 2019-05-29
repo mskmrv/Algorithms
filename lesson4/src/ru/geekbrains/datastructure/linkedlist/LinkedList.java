@@ -16,4 +16,6 @@ public interface LinkedList<E> {
     boolean contains(E value);
 
     E getFirstElement();
+
+    SimpleLinkedListImpl.Entry<E> getFirst();
 }
