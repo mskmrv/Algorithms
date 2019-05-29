@@ -1,17 +1,17 @@
 package ru.geekbrains.datastructure.linkedlist;
 
 public class SimpleLinkedListImpl<E> implements LinkedList<E> {
-    private static class Entry<E> {
-        private final E value;
-        private Entry<E> next;
+    static class Entry<E> {
+        final E value;
+        Entry<E> next;
 
-        private Entry(E value) {
+        Entry(E value) {
             this.value = value;
         }
     }
 
-    private Entry<E> firstElement;
-    private int size;
+    protected Entry<E> firstElement;
+    protected int size;
 
     @Override//O(1)
     public void insertFirst(E value) {
@@ -90,5 +90,10 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
             currentElement = currentElement.next;
         }
         return false;
+    }
+
+    @Override
+    public E getFirstElement() {
+        return firstElement.value;
     }
 }

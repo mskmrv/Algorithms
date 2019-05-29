@@ -14,4 +14,6 @@ public interface LinkedList<E> {
     int getSize();
 
     boolean contains(E value);
+
+    E getFirstElement();
 }
