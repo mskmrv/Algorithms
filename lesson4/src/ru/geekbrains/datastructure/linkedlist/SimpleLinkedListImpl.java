@@ -13,7 +13,7 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
     private Entry<E> firstElement;
     private int size;
 
-    @Override
+    @Override//O(1)
     public void insertFirst(E value) {
         Entry<E> entry = new Entry<>(value);
         entry.next = firstElement;
@@ -21,7 +21,7 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
         size++;
     }
 
-    @Override
+    @Override//O(1)
     public E removeFirst() {
         if (isEmpty()) {
             return null;
@@ -32,7 +32,7 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
         return removedValue.value;
     }
 
-    @Override
+    @Override//O(N)
     public boolean remove(E value) {
         Entry<E> previousElement = null;
         Entry<E> currentElement = firstElement;
@@ -80,7 +80,7 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
         return size;
     }
 
-    @Override
+    @Override//O(N)
     public boolean contains(E value) {
         Entry<E> currentElement = firstElement;
         while (currentElement != null) {
