@@ -1,6 +1,9 @@
 package ru.geekbrains.datastructure;
 
 import ru.geekbrains.datastructure.linkedlist.*;
+import ru.geekbrains.datastructure.queue.PriorityQueue;
+import ru.geekbrains.datastructure.queue.Queue;
+import ru.geekbrains.datastructure.queue.QueueImpl;
 import ru.geekbrains.datastructure.stack.Stack;
 import ru.geekbrains.datastructure.stack.StackImpl;
 
@@ -8,7 +11,8 @@ public class LinkedListTest {
     public static void main(String[] args) {
 //        testLinkedList();
 //        testStack();
-        testTwoSideLinkedList();
+//        testTwoSideLinkedList();
+        testQueue();
     }
 
     private static void testStack() {
@@ -74,6 +78,29 @@ public class LinkedListTest {
 
         while ((!linkedList.isEmpty())) {
             System.out.println(linkedList.removeFirst());
+        }
+    }
+
+    private static void testQueue() {
+//        Queue<Integer> queue = new QueueImpl<>(5);
+//        Queue<Integer> queue = new QueueImpl<>(5);
+        Queue<Integer> queue = new LinkedQueueImpl<>();
+        addToQueue(queue, 2);
+        addToQueue(queue, 4);
+        addToQueue(queue, 1);
+        addToQueue(queue, 5);
+        addToQueue(queue, 3);
+//        addToQueue(queue, 6);
+        System.out.println("Top of queue is " + queue.peek());
+
+        while (!queue.isEmpty()) {
+            System.out.println(queue.remove());
+        }
+    }
+
+    private static void addToQueue(Queue<Integer> queue, int value) {
+        if (!queue.isFull()) {
+            queue.insert(value);
         }
     }
 }
