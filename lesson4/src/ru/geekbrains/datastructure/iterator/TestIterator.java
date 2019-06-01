@@ -20,10 +20,6 @@ public class TestIterator {
         linkedList.insertFirst(2);
         linkedList.insertFirst(3);
 
-        for (Integer integer : linkedList) {
-            System.out.println(integer);
-        }
-
         System.out.println("-------------");
         System.out.println("display " + linkedList.getClass().getSimpleName());
         SimpleLinkedListImpl.Entry<Integer> current = linkedList.getFirst();
