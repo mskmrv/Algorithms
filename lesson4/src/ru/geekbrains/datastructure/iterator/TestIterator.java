@@ -1,4 +1,4 @@
-package iterator;
+package ru.geekbrains.datastructure.iterator;
 
 import ru.geekbrains.datastructure.linkedlist.LinkedList;
 import ru.geekbrains.datastructure.linkedlist.SimpleLinkedListImpl;
