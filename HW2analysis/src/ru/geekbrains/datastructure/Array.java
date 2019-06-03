@@ -1,3 +1,5 @@
+package ru.geekbrains.datastructure;
+
 public interface Array<E> {
 
     void add(E value);

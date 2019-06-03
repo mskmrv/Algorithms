@@ -1,3 +1,5 @@
+package ru.geekbrains.datastructure;
+
 public class SortedArrayImpl<E extends Object & Comparable<? super E>> extends ArrayImpl<E> {
 
     @Override//O(logN)

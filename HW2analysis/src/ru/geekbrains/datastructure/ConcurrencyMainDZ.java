@@ -1,3 +1,5 @@
+package ru.geekbrains.datastructure;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -13,7 +15,7 @@ public class ConcurrencyMainDZ {
 
     public static void main(String[] args) throws InterruptedException, TimeoutException, ExecutionException {
         Supplier<Array> constructor = ArrayImpl::new;
-//        Supplier<Array> constructor = SortedArrayImpl::new;
+//        Supplier<ru.geekbrains.datastructure.Array> constructor = ru.geekbrains.datastructure.SortedArrayImpl::new;
 
         Array arr1 = createArray(constructor);
         Array arr2 = createArray(constructor);

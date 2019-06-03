@@ -1,4 +1,4 @@
-import java.util.concurrent.TimeUnit;
+package ru.geekbrains.datastructure;
 
 public class Main2 {
 
@@ -24,7 +24,7 @@ public class Main2 {
     }
 
     private static void testArray() {
-        //        Array<Integer> array = new ArrayImpl<>();
+        //        ru.geekbrains.datastructure.Array<Integer> array = new ru.geekbrains.datastructure.ArrayImpl<>();
         Array<Integer> array = new SortedArrayImpl<>();
         System.out.println(array);
         array.add(2);
